@@ -8,7 +8,8 @@ ios/
 *.tsbuildinfo
 next-env.d.ts
 expo-env.d.ts
-.env*.local
+.env*
+!.env.example
 .vercel
 .DS_Store
 
