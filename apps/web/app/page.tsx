@@ -1,9 +1,14 @@
 import { TZDate } from '@date-fns/tz';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
+import Image from 'next/image';
 import { Suspense } from 'react';
 
 import { getApkArtifactQuery } from '@/app/queries/apk-artifact.query';
+import hikingShot from '@/public/screenshots/hiking.jpg';
+import homeShot from '@/public/screenshots/home.jpg';
+import recordShot from '@/public/screenshots/record.jpg';
+import recordsShot from '@/public/screenshots/records.jpg';
 
 export default function DownloadPage() {
   return (
@@ -30,9 +35,34 @@ export default function DownloadPage() {
           </li>
         </ol>
       </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold">이렇게 씁니다</h2>
+        <div className="grid grid-cols-2 gap-4">
+          {SCREENSHOTS.map((shot) => (
+            <figure key={shot.alt} className="space-y-2">
+              <Image
+                src={shot.src}
+                alt={shot.alt}
+                sizes="(max-width: 448px) 45vw, 200px"
+                placeholder="blur"
+                className="rounded-2xl border border-gray-200"
+              />
+              <figcaption className="text-lg leading-snug text-gray-700">{shot.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
+
+const SCREENSHOTS = [
+  { src: homeShot, alt: '첫 화면', caption: '[산행 시작]을 누르면 기록이 시작됩니다.' },
+  { src: hikingShot, alt: '산행 기록 중 화면', caption: '걸은 길과 시간·거리가 지도에 쌓입니다.' },
+  { src: recordsShot, alt: '지난 기록 목록', caption: '다녀온 산행이 날짜별로 남습니다.' },
+  { src: recordShot, alt: '지난 기록 지도', caption: '올라간 길을 보며 그대로 내려옵니다.' },
+];
 
 async function DownloadButton() {
   const result = await getApkArtifactQuery();
