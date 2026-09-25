@@ -51,7 +51,7 @@ export const HikeMap = forwardRef<NaverMapViewRef, HikeMapProps>(
         {coords.length >= 2 && (
           <NaverMapPathOverlay
             coords={coords}
-            width={8}
+            width={6}
             outlineWidth={2}
             color={palette.route}
             outlineColor={palette.routeOutline}

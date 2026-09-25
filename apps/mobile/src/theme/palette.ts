@@ -13,6 +13,6 @@ export const palette = {
   stopPressed: '#991b1b',
 
   /** 지도 위 기록 경로 선 — 등산로 레이어의 초록·갈색 위에서 잘 보이는 색 */
-  route: '#e11d48',
+  route: '#2563eb',
   routeOutline: '#ffffff',
 } as const;
