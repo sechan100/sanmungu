@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "산문구",
+    "slug": "sanmungu",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "sanmungu",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.sechan.sanmungu",
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "@mj-studio/react-native-naver-map",
+        {
+          "client_id": "8lklm27aj3",
+          "android": {
+            "ACCESS_FINE_LOCATION": true,
+            "ACCESS_COARSE_LOCATION": true
+          }
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraMavenRepos": [
+              "https://repository.map.naver.com/archive/maven"
+            ],
+            "buildArchs": [
+              "arm64-v8a"
+            ]
+          }
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "산행 경로를 기록하고 지도에 현재 위치를 표시하기 위해 사용합니다.",
+          "isAndroidForegroundServiceEnabled": true,
+          "isAndroidBackgroundLocationEnabled": false
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
