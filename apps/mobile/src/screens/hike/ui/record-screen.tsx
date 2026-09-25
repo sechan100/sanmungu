@@ -66,7 +66,7 @@ export const RecordScreen = ({ recordId }: RecordScreenProps) => {
           {formatDay(startedAt)} {formatClock(startedAt)} 출발
         </AppText>
         <AppText fontSize={fontSize.body} color={palette.ink2}>
-          {formatDuration(startedAt, new Date(record.endedAt))} · {formatDistance(pathDistanceMeters(record.points))} · 빨간 선이 걸었던 길입니다
+          {formatDuration(startedAt, new Date(record.endedAt))} · {formatDistance(pathDistanceMeters(record.points))} · 파란 선이 걸었던 길입니다
         </AppText>
         <View style={styles.row}>
           <BigButton
