@@ -4,10 +4,16 @@
     "slug": "sanmungu",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "scheme": "sanmungu",
     "userInterfaceStyle": "light",
     "android": {
       "package": "com.sechan.sanmungu",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "monochromeImage": "./assets/adaptive-icon-monochrome.png",
+        "backgroundColor": "#15803d"
+      },
       "predictiveBackGestureEnabled": false,
       "permissions": [
         "RECEIVE_BOOT_COMPLETED"
@@ -18,7 +24,6 @@
       [
         "@mj-studio/react-native-naver-map",
         {
-          "client_id": "8lklm27aj3",
           "android": {
             "ACCESS_FINE_LOCATION": true,
             "ACCESS_COARSE_LOCATION": true
