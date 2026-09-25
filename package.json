@@ -1,0 +1,10 @@
+{
+  "name": "sanmungu",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build:web": "npm run build -w=apps/web"
+  }
+}

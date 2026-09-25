@@ -1,0 +1,19 @@
+node_modules/
+.expo/
+.next/
+dist/
+android/
+ios/
+/apk/
+*.tsbuildinfo
+next-env.d.ts
+expo-env.d.ts
+.env*.local
+.vercel
+.DS_Store
+
+# 로컬 툴링 — 생성물·시크릿
+justfile
+just/
+/ops/
+.idea/
